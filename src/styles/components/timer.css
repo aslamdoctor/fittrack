@@ -1,0 +1,80 @@
+/* Timer component styles */
+
+.timer-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.timer-circle-progress {
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.1s linear;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.timer-time {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  font-family: var(--font-family-display);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.timer-time--complete {
+  color: var(--color-success);
+}
+
+.timer-time--active {
+  color: var(--color-accent);
+}
+
+.timer-time--almost-done {
+  animation: pulse 1s infinite;
+}
+
+.timer-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timer-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.timer-main-controls {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-adjust-controls {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .timer-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .timer-time {
+    font-size: var(--font-size-3xl);
+  }
+}

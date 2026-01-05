@@ -1,0 +1,47 @@
+/* Home page specific styles */
+
+.quick-actions-card {
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--glow-accent);
+  animation: glow 2s infinite;
+}
+
+.stat-card {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  borderRadius: var(--radius-md);
+  textAlign: center;
+  transition: all var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  background: var(--color-surface-hover);
+}
+
+.stat-icon {
+  margin-bottom: var(--space-sm);
+}
+
+.stat-value {
+  fontSize: var(--font-size-3xl);
+  fontWeight: var(--font-weight-black);
+  marginBottom: var(--space-xs);
+}
+
+.stat-label {
+  fontSize: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.recent-workouts-empty {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .quick-actions-card {
+    flex-direction: column;
+  }
+}

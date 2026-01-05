@@ -1,0 +1,54 @@
+/* History page specific styles */
+
+.history-card {
+  transition: all var(--transition-base);
+  animation: slideUp var(--transition-base);
+}
+
+.history-card:hover {
+  transform: translateY(-2px);
+}
+
+.history-card--expanded {
+  box-shadow: var(--shadow-lg), var(--glow-accent);
+}
+
+.history-exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  animation: slideDown var(--transition-base);
+}
+
+.history-exercise-item {
+  padding: var(--space-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.history-set-chip {
+  display: inline-block;
+  padding: var(--space-xs);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-right: var(--space-xs);
+}
+
+.data-management-warning {
+  padding: var(--space-md);
+  background: rgba(255, 51, 102, 0.1);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .history-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,110 @@
+.set-logger {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glow-accent);
+}
+
+.set-logger__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-lg);
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.set-logger__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.set-logger__input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.set-logger__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.set-logger__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.set-logger__button {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-hover);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.set-logger__button:hover {
+  background: var(--color-surface);
+  transform: scale(1.05);
+}
+
+.set-logger__button:active {
+  transform: scale(0.95);
+}
+
+.set-logger__input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-md);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  background: var(--color-primary-dark);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+}
+
+.set-logger__input:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Remove number input arrows */
+.set-logger__input::-webkit-outer-spin-button,
+.set-logger__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.set-logger__input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.set-logger__previous {
+  margin-top: var(--space-md);
+  padding: var(--space-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .set-logger__inputs {
+    grid-template-columns: 1fr;
+  }
+}

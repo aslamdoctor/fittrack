@@ -1,0 +1,59 @@
+/* Routine page specific styles */
+
+.routine-card {
+  transition: all var(--transition-base);
+}
+
+.routine-card:hover {
+  transform: translateY(-4px);
+}
+
+.routine-exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  animation: slideDown var(--transition-base);
+}
+
+.routine-exercise-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.routine-exercise-item:hover {
+  background: var(--color-surface-hover);
+  transform: translateX(4px);
+}
+
+.routine-form-exercise-card {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-fast);
+}
+
+.routine-form-exercise-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.floating-action-button {
+  position: fixed;
+  bottom: 100px;
+  right: var(--space-lg);
+  z-index: var(--z-dropdown);
+  box-shadow: var(--shadow-lg), var(--glow-accent);
+}
+
+@media (max-width: 768px) {
+  .floating-action-button {
+    bottom: 80px;
+    right: var(--space-md);
+  }
+}

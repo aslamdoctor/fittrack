@@ -1,0 +1,83 @@
+/* Workout page specific styles */
+
+.set-row {
+  animation: slideUp var(--transition-base);
+}
+
+.set-row--completed {
+  background: rgba(204, 255, 0, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: var(--glow-accent);
+}
+
+.set-logger {
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--glow-accent);
+  animation: pulse 2s infinite;
+}
+
+.exercise-progress-bar {
+  transition: width var(--transition-base);
+  box-shadow: 0 0 10px currentColor;
+}
+
+.workout-stat-card {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.workout-stat-card:hover {
+  transform: scale(1.05);
+  background: var(--color-surface-hover);
+}
+
+.workout-navigation-button {
+  transition: all var(--transition-fast);
+}
+
+.workout-navigation-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quick-add-exercise-button {
+  width: 100%;
+  border: 2px dashed var(--color-accent);
+  transition: all var(--transition-fast);
+}
+
+.quick-add-exercise-button:hover {
+  background: rgba(204, 255, 0, 0.1);
+  transform: scale(1.02);
+}
+
+/* Completion animations */
+@keyframes completeSet {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.set-complete-animation {
+  animation: completeSet var(--transition-base);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .set-logger {
+    padding: var(--space-md);
+  }
+
+  .workout-stat-card {
+    padding: var(--space-sm);
+  }
+}
