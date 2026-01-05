@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardBody } from '../ui/Card';
 import { Badge } from '../ui/Badge';
 import { SetRow } from './SetRow';

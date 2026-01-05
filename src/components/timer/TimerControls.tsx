@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '../ui/Button';
 import { IconButton } from '../ui/IconButton';
 import { Play, Pause, RotateCcw, SkipForward, Plus, Minus } from 'lucide-react';

@@ -1,10 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Modal } from '../ui/Modal';
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { EXERCISE_LIBRARY } from '../../data/exerciseLibrary';
-import { Plus } from 'lucide-react';
 
 interface ExerciseSelectorProps {
   isOpen: boolean;
@@ -85,14 +84,20 @@ export function ExerciseSelector({ isOpen, onClose, onSelectExercise }: Exercise
 
           <div style={{ display: 'flex', gap: 'var(--space-xs)', marginBottom: 'var(--space-lg)', flexWrap: 'wrap' }}>
             {categories.map((category) => (
-              <Badge
+              <button
                 key={category}
-                variant={selectedCategory === category ? 'success' : 'default'}
-                style={{ cursor: 'pointer' }}
                 onClick={() => setSelectedCategory(category)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                }}
               >
-                {category}
-              </Badge>
+                <Badge variant={selectedCategory === category ? 'success' : 'default'}>
+                  {category}
+                </Badge>
+              </button>
             ))}
           </div>
 

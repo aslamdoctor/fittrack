@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';

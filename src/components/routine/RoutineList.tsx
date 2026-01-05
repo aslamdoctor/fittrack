@@ -1,4 +1,3 @@
-import React from 'react';
 import { RoutineCard } from './RoutineCard';
 import { Routine } from '../../types';
 

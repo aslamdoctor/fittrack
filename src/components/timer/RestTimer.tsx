@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Card, CardBody } from '../ui/Card';
 import { TimerDisplay } from './TimerDisplay';
 import { TimerControls } from './TimerControls';

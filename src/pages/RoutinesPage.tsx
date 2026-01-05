@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container } from '../components/layout/Container';
 import { Button } from '../components/ui/Button';
@@ -24,15 +24,12 @@ export function RoutinesPage() {
     exercises: Omit<Exercise, 'id'>[]
   ) => {
     const routine = createRoutine(name, description);
-    exercises.forEach((exercise) => {
-      // We'll add exercises through the routine context
-      // For now, we need to update the routine with exercises
-      updateRoutine(routine.id, {
-        exercises: exercises.map((ex, index) => ({
-          id: `${routine.id}-ex-${index}`,
-          ...ex,
-        })),
-      });
+    // Update the routine with exercises
+    updateRoutine(routine.id, {
+      exercises: exercises.map((ex, index) => ({
+        id: `${routine.id}-ex-${index}`,
+        ...ex,
+      })),
     });
     setViewMode('list');
   };

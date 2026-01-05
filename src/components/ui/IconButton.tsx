@@ -47,10 +47,6 @@ export function IconButton({
     ...variantStyles[variant],
   };
 
-  const hoverStyle = `
-    opacity: 0.8;
-  `;
-
   return (
     <button
       style={style}

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { AppSettings, STORAGE_KEYS, DEFAULT_SETTINGS } from '../types';
 

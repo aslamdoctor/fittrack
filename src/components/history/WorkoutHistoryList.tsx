@@ -1,4 +1,3 @@
-import React from 'react';
 import { WorkoutHistoryCard } from './WorkoutHistoryCard';
 import { WorkoutSession } from '../../types';
 

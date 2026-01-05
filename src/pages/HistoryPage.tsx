@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../components/layout/Container';
 import { WorkoutHistoryList } from '../components/history/WorkoutHistoryList';
 import { DataManagement } from '../components/history/DataManagement';

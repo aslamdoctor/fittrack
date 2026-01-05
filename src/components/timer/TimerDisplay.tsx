@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface TimerDisplayProps {
   timeRemaining: number;
   totalTime: number;

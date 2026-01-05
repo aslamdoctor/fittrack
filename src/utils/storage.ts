@@ -1,4 +1,5 @@
 import { AppData } from '../types';
+import { DEFAULT_SETTINGS } from '../types/storage';
 
 export function loadFromStorage<T>(key: string, fallback: T): T {
   try {
@@ -38,7 +39,7 @@ export function exportAllData(): void {
     const data: Partial<AppData> = {
       routines: loadFromStorage('fittrack_routines', []),
       workoutHistory: loadFromStorage('fittrack_workout_history', []),
-      settings: loadFromStorage('fittrack_settings', {}),
+      settings: loadFromStorage('fittrack_settings', DEFAULT_SETTINGS),
     };
 
     const json = JSON.stringify(data, null, 2);

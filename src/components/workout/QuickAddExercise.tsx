@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from '../ui/Button';
 import { ExerciseSelector } from '../routine/ExerciseSelector';
 import { Exercise } from '../../types';

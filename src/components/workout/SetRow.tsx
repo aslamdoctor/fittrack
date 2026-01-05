@@ -1,4 +1,3 @@
-import React from 'react';
 import { IconButton } from '../ui/IconButton';
 import { SetLog } from '../../types';
 import { Check, Circle, Trash2 } from 'lucide-react';

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { Routine, Exercise, STORAGE_KEYS } from '../types';
 import { generateId } from '../utils/generateId';
